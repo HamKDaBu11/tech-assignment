@@ -3,6 +3,7 @@ import chart from "./assets/chart.png";
 import padlock from "./assets/padlock.png";
 import trophy from "./assets/trophy.png";
 import Card from './components/card/Card';
+import Footer from './components/footer/Footer';
 import Info from './components/info/Info';
 import Nav from "./components/nav/Nav";
 import Registration from './components/registration/Registration';
@@ -40,6 +41,7 @@ function App() {
       </div>
       <Slider />
       <Registration />
+      <Footer />
     </div>
   );
 }

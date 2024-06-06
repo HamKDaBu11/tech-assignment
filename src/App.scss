@@ -1,0 +1,37 @@
+.app {
+  max-width: 1440px;
+  background-color: #ebf0ff;
+}
+
+.card-container {
+    padding: 30px 0;
+}
+
+.app-card-large {
+  max-width: 1201px;
+  max-height: 163px;
+  margin: 0 30px;
+  box-shadow: 0px 24px 24px 0px rgba(0, 0, 0, 0.0784313725);
+  &__mini {
+    width: 377.67px;
+  }
+  &__info {
+    padding-left: 15px;
+    width: 241.67px;
+    height: 67px;
+  }
+  &__heading {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 19.36px;
+    color: #f89d21;
+  }
+  &__detail {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 19.36px;
+    color: #515151;
+  }
+}

@@ -1,0 +1,63 @@
+.info {
+  display: flex;
+  max-width: 1201px;
+  max-height: 669px;
+  margin: 0 auto;
+  padding: 30px 0;
+  &__lorem {
+    width: 582px;
+  }
+  &__lorem-heading {
+    position: relative;
+    margin: 0;
+    margin-bottom: 48px;
+    width: 100%;
+    height: 116px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58.09px;
+  }
+  &__vector {
+    position: absolute;
+    top: 52.22px;
+    left: 316.24px;
+    width: 121.69px;
+    height: 8.29px;
+    border: 4px 0px 0px 0px;
+    background-color: #f89d21;
+    rotate: -1.34deg;
+  }
+  &__dolor {
+    color: #40b0e6;
+  }
+  &__testimonials {
+    display: flex;
+    flex-direction: column;
+  }
+  &__img {
+    border-radius: 32px;
+  }
+  &__personal {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+  }
+  &__card {
+    margin-bottom: 24px;
+    box-shadow: 0px 24px 24px 0px #00000014;
+  }
+  &__name {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 19.36px;
+  }
+
+  &__tech-img {
+    position: relative;
+    width: 572.74px;
+    background: url('../../assets/tech_img.png');
+    background-size: contain;
+  }
+}

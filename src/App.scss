@@ -1,5 +1,8 @@
+@import './breakpoints.scss';
+
 .app {
-  max-width: 1440px;
+  width: 100%;
+  min-width: 1200px;
   background-color: #ebf0ff;
 }
 

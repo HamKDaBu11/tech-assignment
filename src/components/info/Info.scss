@@ -1,3 +1,14 @@
+$extra-small-devices: 600px;
+$medium-devices: 768px;
+$large-devices: 992px;
+$extra-large-devices: 1200px;
+
+@mixin extra-small-devices {
+  @media (max-width: #{$extra-small-devices}) {
+    @content;
+  }
+}
+
 .info {
   display: flex;
   justify-content: center;
@@ -5,8 +16,19 @@
   max-height: 669px;
   margin: 0 auto;
   padding: 30px 0;
+
+  @include extra-small-devices {
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 0;
+  }
+
   &__lorem {
     width: 582px;
+
+    @include extra-small-devices {
+      width: 100%;
+    }
   }
   &__lorem-heading {
     position: relative;
@@ -17,6 +39,12 @@
     font-size: 48px;
     font-weight: 700;
     line-height: 58.09px;
+
+    @include extra-small-devices {
+      text-align: center;
+      margin-bottom: 24px;
+      height: 70px;
+    }
   }
   &__vector {
     position: absolute;
@@ -27,6 +55,10 @@
     border: 4px 0px 0px 0px;
     background-color: #f89d21;
     rotate: -1.34deg;
+
+    @include extra-small-devices {
+      left: 500px;
+    }
   }
   &__dolor {
     color: #40b0e6;
@@ -37,15 +69,28 @@
   }
   &__img {
     border-radius: 32px;
+    @include extra-small-devices {
+      border-radius: 50px;
+    }
   }
   &__personal {
     display: flex;
     flex-direction: column;
     padding-left: 15px;
+
+    @include extra-small-devices {
+      align-items: center;
+      font-size: 1.5rem;
+    }
   }
   &__card {
     margin-bottom: 24px;
     box-shadow: 0px 24px 24px 0px #00000014;
+
+    @include extra-small-devices {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__name {
     margin: 0;
@@ -53,6 +98,10 @@
     font-size: 1rem;
     font-weight: 500;
     line-height: 19.36px;
+
+    @include extra-small-devices {
+      font-size: 1.5rem;
+    }
   }
 
   &__tech-img {
@@ -60,5 +109,9 @@
     width: 572.74px;
     background: url('../../assets/tech_img.png');
     background-size: contain;
+
+    @include extra-small-devices {
+      display: none;
+    }
   }
 }

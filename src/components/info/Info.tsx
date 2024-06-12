@@ -1,8 +1,24 @@
+import { useEffect, useState } from 'react';
 import schultz_2 from '../../assets/schultz_2.png';
 import Card from '../card/Card';
 import './Info.scss';
 
 const Info = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleResize = () => {
+      if (window.screen.width < 600) {
+          setIsMobile(true)
+      } else {
+          setIsMobile(false)
+      }
+    }
+
+  useEffect(() => {
+      window.addEventListener("resize", handleResize)
+  })
+
+
   return (
     <div className='info'>
       <div className="info__lorem">
@@ -12,21 +28,21 @@ const Info = () => {
         </h1>
         <div className='info__testimonials'>
           <Card className="info__card">
-            <img className='info__img' src={schultz_2} height={64} width={64} />
+            <img className='info__img' src={schultz_2} height={isMobile ? 100 : 64} width={isMobile ? 100 : 64} />
             <div className='info__personal'>
               <p className='info__name'>Andrew Schultz</p>
               <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, in tristique senectus dui pharetra sit.</span>
             </div>
           </Card>
           <Card className="info__card">
-            <img className='info__img' src={schultz_2} height={64} width={64} />
+            <img className='info__img' src={schultz_2} height={isMobile ? 100 : 64} width={isMobile ? 100 : 64} />
             <div className='info__personal'>
               <p className='info__name'>Andrew Schultz</p>
               <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, in tristique senectus dui pharetra sit.</span>
             </div>
           </Card>
           <Card className="info__card">
-            <img className='info__img' src={schultz_2} height={64} width={64} />
+            <img className='info__img' src={schultz_2} height={isMobile ? 100 : 64} width={isMobile ? 100 : 64} />
             <div className='info__personal'>
               <p className='info__name'>Andrew Schultz</p>
               <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae, in tristique senectus dui pharetra sit.</span>

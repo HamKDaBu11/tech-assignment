@@ -1,15 +1,36 @@
+$extra-small-devices: 600px;
+$medium-devices: 768px;
+$large-devices: 992px;
+$extra-large-devices: 1200px;
+
+@mixin extra-small-devices {
+  @media (max-width: #{$extra-small-devices}) {
+    @content;
+  }
+}
+
 .registration {
   display: flex;
   max-width: 1201px;
   max-height: 631px;
   margin: 0 auto;
   padding: 30px 0;
+
+  @include extra-small-devices {
+    justify-content: center;
+    width: 90%;
+  }
+
   &__img {
     width: 489px;
     height: 489px;
     background-image: url("../../assets/tech_img.png");
     background-size: contain;
     transform: scaleX(-1);
+
+    @include extra-small-devices {
+      display: none;
+    }
   }
   &__card {
     flex-direction: column;
@@ -17,6 +38,11 @@
     height: 100%;
     padding: 48px;
     box-shadow: 0px 34px 44px -20px #b9ceea40;
+
+    @include extra-small-devices {
+      flex-grow: 1;
+      align-items: center;
+    }
   }
   &__heading-block {
     width: 441px;
@@ -35,6 +61,10 @@
   &__form {
     width: 479px;
     height: 282px;
+
+    @include extra-small-devices {
+      width: 90%;
+    }
   }
   &__field {
     width: 100%;

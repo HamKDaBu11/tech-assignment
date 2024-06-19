@@ -30,71 +30,65 @@
         margin: 0 auto;
     }
     &__chevron-left {
+        cursor: pointer;
         content: url('../../assets/svg/chevron-left.svg');
         width: 24px;
         height: 24px;
     }
     &__brands {
-        position: relative;
+        // position: relative;
         display: flex;
+        align-items: center;
         justify-content: space-around;
         flex-grow: 1;
+        overflow-x: hidden;
+    }
+    &__brand-microsoft {
+        display: flex;
+        width: 30%;
+        align-items: center;
+        justify-content: space-around;
+    }
+    &__window-boxes {
+        display: grid;
+        grid-template-columns: auto auto;
     }
     &__chevron-right {
+        cursor: pointer;
         content: url('../../assets/svg/chevron-right.svg');
         width: 24px;
         height: 24px;
     }
     &__top-left {
-        position: absolute;
-        top: -25px;
-        left: 125px;
         content: url('../../assets/svg/square.svg');
         width: 26.64px;
         height: 26.64px;
     }
     &__top-right {
-        position: absolute;
-        top: -25px;
-        left: 153px;
         content: url('../../assets/svg/square.svg');
         width: 26.64px;
         height: 26.64px;
     }
     &__bottom-left {
-        position: absolute;
-        top: 3px;
-        left: 125px;
         content: url('../../assets/svg/square.svg');
         width: 26.64px;
         height: 26.64px;
     }
     &__bottom-right {
-        position: absolute;
-        top: 3px;
-        left: 153px;
         content: url('../../assets/svg/square.svg');
         width: 26.64px;
         height: 26.64px;
     }
     &__microsoft-title {
-        position: absolute;
-        top: -20px;
-        left: 195px;
         content: url('../../assets/svg/microsoft.svg');
     }
     &__brand-twitter {
-        position: absolute;
-        top: -40px;
-        left: 450px;
         content: url('../../assets/svg/twitter.svg');
         width: 88px;
         height: 72px;
     }
     &__brand-cocacola {
-        position: absolute;
-        top: -45px;
-        left: 575px;
+        order: 1;
         content: url('../../assets/svg/coca-cola.svg');
     }
 }

@@ -1,24 +1,24 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Slider.scss';
 
 const Slider = () => {
 
     const [slideIndex, setSlideIndex] = useState(1);
 
-    // const [currentIndex, setCurrentIndex] = useState(0);
-    // const carouselInfiniteScroll = () => {
-    //     if (currentIndex === 2) {
-    //         return setCurrentIndex(0);
-    //     }
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const carouselInfiniteScroll = () => {
+        if (currentIndex === 2) {
+            return setCurrentIndex(0);
+        }
 
-    //     return setCurrentIndex(currentIndex + 1);
-    // }
+        return setCurrentIndex(currentIndex + 1);
+    }
 
-    // useEffect(() => {
-    //     const interval = setInterval(() => {carouselInfiniteScroll()}, 3000)
+    useEffect(() => {
+        const interval = setInterval(() => { carouselInfiniteScroll() }, 3000)
 
-    //     return () => clearInterval(interval)
-    // })
+        return () => clearInterval(interval)
+    })
 
     // function plusSlides(n: any) {
     //     setSlideIndex(prevIndex => { return prevIndex += n })
@@ -53,7 +53,7 @@ const Slider = () => {
             <div className='slider__carousel'>
                 <div className='slider__chevron-left'></div>
                 <div className='slider__brands'>
-                    <div className='slider__brand-microsoft brand'>
+                    <div className='slider__brand-microsoft brand' style={{ transform: `translate(-${currentIndex * 100}%)` }}>
                         <div className='slider__window-boxes'>
                             <div className='slider__top-left'></div>
                             <div className='slider__top-right'></div>
@@ -62,8 +62,8 @@ const Slider = () => {
                         </div>
                         <div className='slider__microsoft-title'></div>
                     </div>
-                    <div className='slider__brand-twitter brand'></div>
-                    <div className='slider__brand-cocacola brand'></div>
+                    <div className='slider__brand-twitter brand' style={{ transform: `translate(-${currentIndex * 100}%)` }}></div>
+                    <div className='slider__brand-cocacola brand' style={{ transform: `translate(-${currentIndex * 100}%)` }}></div>
                 </div>
                 <div className='slider__chevron-right'></div>
             </div>

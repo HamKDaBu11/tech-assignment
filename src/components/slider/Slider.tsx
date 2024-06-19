@@ -65,7 +65,7 @@ const Slider = () => {
                     <div className='slider__brand-twitter brand'></div>
                     <div className='slider__brand-cocacola brand'></div>
                 </div>
-                <div className='slider__chevron-right' onClick={() => plusSlides(1)}></div>
+                <div className='slider__chevron-right'></div>
             </div>
         </div>
     )
